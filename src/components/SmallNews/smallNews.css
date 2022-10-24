@@ -1,0 +1,11 @@
+.small-news{
+    @apply flex flex-col justify-center items-center border-t border-b w-[300px] relative
+}
+
+.small-news-count{
+    @apply w-full absolute top-1 font-bold text-center text-gray-200 text-6xl z-10
+}
+
+.small-news-desc{
+    @apply bg-white text-2xl text-black font-medium text-center z-20 mt-10 mb-4
+}

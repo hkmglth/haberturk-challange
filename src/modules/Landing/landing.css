@@ -1,0 +1,38 @@
+.landing-wrapper{
+    @apply flex flex-row min-h-[900px] h-screen
+}
+.landing-left{
+    @apply flex flex-1 flex-col bg-light-red min-h-[900px] h-screen w-full lg:w-2/3
+}
+.landing-right{
+    @apply relative items-center hidden w-0 lg:flex lg:flex-col lg:w-1/3 h-screen min-h-[800px] overflow-y-hidden last:pb-10
+}
+.landing-container{
+    @apply flex flex-row flex-1
+}
+.landing-content{
+    @apply flex flex-col
+}
+.landing-content > div{
+    @apply flex flex-1 flex-col justify-center items-start h-full px-8 md:px-20 xl:px-36 gap-y-3 text-white
+}
+.landing-date{
+    @apply text-3xl font-bold
+}
+.landing-header{
+    @apply font-bold text-6xl md:text-8xl xl:text-18xl relative lg:right-3
+}
+.landing-sidebar{
+    @apply flex flex-1 items-end justify-center max-w-[64px] bg-white p-5
+}
+.landing-desc{
+    @apply text-base xl:text-xl truncate whitespace-normal
+}
+.landing-footer{
+    @apply text-sm text-white px-8 md:px-20 xl:px-36 pb-4 pt-8 bg-light-red
+}
+.news-overlay{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(9,9,121,0) 50%, rgba(255,255,255,1) 100%);
+    @apply fixed z-50 w-1/3 h-full
+}
