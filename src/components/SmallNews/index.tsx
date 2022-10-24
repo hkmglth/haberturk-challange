@@ -7,7 +7,7 @@ export type ISmallNewsProps = {
 }
 
 const SmallNews = ({ id, desc }: ISmallNewsProps) => {
-    console.log(id.toString().length === 1 ? `0${id}` : id)
+
     return (
         <div className='small-news'>
             <p className='small-news-count'>

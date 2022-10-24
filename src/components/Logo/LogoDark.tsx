@@ -1,9 +1,9 @@
 import React from 'react'
 import { ILogoProps } from '.'
 
-const LogoDark = ({className}:ILogoProps) => {
+const LogoDark = ({ className, onClick }: ILogoProps) => {
     return (
-        <svg className={className} xmlns="http://www.w3.org/2000/svg" color='currentColor' fill='currentColor' width="79.406" height="37.916" viewBox="0 0 79.406 37.916">
+        <svg onClick={onClick} className={className} xmlns="http://www.w3.org/2000/svg" color='currentColor' fill='currentColor' width="79.406" height="37.916" viewBox="0 0 79.406 37.916">
             <g id="Group_704" data-name="Group 704" transform="translate(-187 143)">
                 <path id="Path_2332" data-name="Path 2332" d="M2,1.8H6.665V7.16h5.161V1.8h4.665V16.986H11.827V10.832H6.665v6.154H2Z" transform="translate(185 -144.8)" fillRule="evenodd" />
                 <path id="Path_2333" data-name="Path 2333" d="M27.727,11.229,26.039,5.77l-1.687,5.459Zm.993,3.276h-5.36l-.695,2.481H17.9L23.558,1.8H28.62l5.658,15.186H29.414Z" transform="translate(184.882 -144.8)" fillRule="evenodd" />

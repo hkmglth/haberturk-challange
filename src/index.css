@@ -6,4 +6,13 @@
     .point-red{
         @apply w-3 h-3 rounded-full bg-light-red
     }
+    .button-toggle{
+        @apply w-[64px] flex justify-center items-center
+    }
+    .link{
+        @apply text-white text-3xl font-bold
+    }
+    .link-active{
+        @apply text-dark-red
+    }
 }

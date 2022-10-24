@@ -3,22 +3,23 @@ import LogoDark from './LogoDark'
 import LogoLight from './LogoLight'
 
 export type ILogoProps = {
-    className?:string
+    className?:string,
+    onClick?:() => any
 }
 type ILogoThemeProps = {
     theme: 'dark'|'light'
 }
 
-const Logo = ({className, theme}: ILogoProps & ILogoThemeProps ) => {
+const Logo = ({className, theme, onClick}: ILogoProps & ILogoThemeProps ) => {
   return (
     <>
         {
             theme === 'dark'
             ?
-                <LogoDark className={className} />
+                <LogoDark onClick={onClick} className={className} />
             : theme === 'light'
             &&
-                <LogoLight className={className} />
+                <LogoLight onClick={onClick} className={className} />
         }
     </>
   )

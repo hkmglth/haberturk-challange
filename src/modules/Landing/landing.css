@@ -20,7 +20,7 @@
     @apply text-3xl font-bold
 }
 .landing-header{
-    @apply font-bold text-6xl md:text-8xl xl:text-18xl relative lg:right-3
+    @apply font-bold text-6xl md:text-8xl xl:text-18xl relative lg:right-3 w-60 md:w-96 xl:w-[800px]
 }
 .landing-sidebar{
     @apply flex flex-1 items-end justify-center max-w-[64px] bg-white p-5
@@ -29,7 +29,7 @@
     @apply text-base xl:text-xl truncate whitespace-normal
 }
 .landing-footer{
-    @apply text-sm text-white px-8 md:px-20 xl:px-36 pb-4 pt-8 bg-light-red
+    @apply text-sm text-white px-8 pb-4 pt-8 md:px-20 xl:px-36 bg-light-red
 }
 .news-overlay{
     background: rgb(255,255,255);

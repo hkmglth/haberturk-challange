@@ -1,0 +1,33 @@
+.wrapper{
+    @apply w-full h-full
+}
+.sidebar{
+    @apply fixed flex flex-row h-screen transition-all duration-150 ease-in-out border-r z-0
+}
+.sidebar-active{
+    @apply w-screen md:w-[625px] bg-light-red
+}
+.sidebar-disabled{
+    @apply w-[64px] bg-white
+}
+.sidebar-content{
+    @apply w-[calc(100%-64px)] z-20 flex flex-col items-start justify-center gap-y-3 transition-all duration-150 ease-in-out
+}
+.sidebar-content-active{
+    @apply visible opacity-100 pl-16
+}
+.sidebar-content-disabled{
+    @apply invisible opacity-0 pl-0
+}
+.content{
+    @apply w-full ml-[64px]
+}
+.redFlag{
+    @apply absolute top-0 left-0 bg-light-red w-[64px] transition-all duration-300 ease-in-out z-10
+}
+.redFlag-active{
+    @apply absolute top-0 w-[64px] h-[350px]
+}
+.redFlag-disabled{
+    @apply absolute top-0 w-[64px] h-[220px]
+}
