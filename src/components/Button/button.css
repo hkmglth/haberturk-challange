@@ -1,3 +1,6 @@
 .button-lightRed{
     @apply bg-white text-2xl font-bold text-light-red hover:text-white hover:bg-light-red transition-all duration-300 ease-in-out px-3 py-2
 }
+.button-outlined-white{
+    @apply border font-bold px-5 py-2
+}

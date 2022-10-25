@@ -26,7 +26,7 @@
     @apply font-bold text-6xl md:text-8xl xl:text-18xl relative lg:right-3 w-60 md:w-96 xl:w-[800px]
 }
 .landing-sidebar{
-    @apply flex flex-1 items-end justify-center max-w-[64px] bg-white p-5
+    @apply flex flex-1 items-end justify-center min-w-[64px] max-w-[64px] bg-white p-5
 }
 .landing-desc{
     @apply text-base xl:text-xl truncate whitespace-normal

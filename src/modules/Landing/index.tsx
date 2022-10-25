@@ -5,15 +5,15 @@ import Button from 'components/Button'
 import SmallNews from 'components/SmallNews'
 
 import { useNavigate } from 'react-router-dom'
-import useScrollOnDrag from 'react-scroll-ondrag'
+import { useDraggable } from "react-use-draggable-scroll"
 import './landing.css'
 import { useNews } from 'hooks'
 
 const Landing = () => {
 
     const navigate = useNavigate()
-    const newsRef = useRef<React.LegacyRef<HTMLDivElement>>(null)
-    const { events } = useScrollOnDrag(newsRef);
+    const newsRef = useRef<HTMLDivElement>() as React.MutableRefObject<HTMLInputElement>
+    const { events } = useDraggable(newsRef)
     const { news } = useNews()
 
     const handleNavigate = () => {
@@ -28,7 +28,7 @@ const Landing = () => {
                 <div className='landing-container'>
 
                     <div className='landing-sidebar'>
-                        <div className='point-red' />
+                        <div className='point point-red' />
                     </div>
 
                     <div className='landing-content'>
@@ -43,7 +43,7 @@ const Landing = () => {
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text...
                             </p>
                             <p className='landing-route'>
-                                <Button onClick={handleNavigate} label='Görüntüle' />
+                                <Button variant='red' onClick={handleNavigate} label='Görüntüle' />
                             </p>
                         </div>
                         <p className='landing-footer'>

@@ -3,12 +3,20 @@ import './button.css'
 
 type IButtonProps = {
     label: string,
-    onClick?:() => any
+    onClick?: () => any,
+    variant: 'red' | 'outlined-white',
+    className?: string
 }
 
-const Button = ({ label, onClick }: IButtonProps) => {
+const Button = ({ label, onClick, variant, className }: IButtonProps) => {
+    const selected =
+    variant === 'red'
+    ? 'button-lightRed'
+    : variant === 'outlined-white'
+        ? 'button-outlined-white'
+        : 'button'
     return (
-        <button onClick={onClick} className='button-lightRed'>
+        <button onClick={onClick} className={ className + ' ' + selected }>
             {label}
         </button>
     )

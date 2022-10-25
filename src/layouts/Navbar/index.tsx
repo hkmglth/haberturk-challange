@@ -23,11 +23,11 @@ const Navbar = () => {
                 <div className={`sidebar ${toggle ? 'sidebar-active' : 'sidebar-disabled' }`}>
                     <Logo onClick={() => navigate('/')} theme='light' className='w-[64px] absolute top-0 justify-center items-center px-2 z-20' />
                     <div className={`redFlag ${toggle ? 'redFlag-active' : 'redFlag-disabled'}`} />
-                    <button onClick={() => setToggle(!toggle)} className='button-toggle'>
+                    <button onClick={() => setToggle(!toggle)} className='button-toggle button-sidebar'>
                         {
                             toggle
-                            ? <Lottie className='w-full' segments={isFirstRun ? [30,30] : toggle ? [0,30] : [0,30]} speed={5} loop={false} play animationData={ MenuLight } />
-                            : <Lottie className='w-full' segments={isFirstRun ? [0,0] : toggle ? [30,0] : [30,30]} speed={5} loop={false} play animationData={ MenuDark } />
+                            ? <Lottie className='w-[64px]' segments={isFirstRun ? [30,30] : toggle ? [0,30] : [0,30]} speed={5} loop={false} play animationData={ MenuLight } />
+                            : <Lottie className='w-[64px]' segments={isFirstRun ? [0,0] : toggle ? [30,0] : [30,30]} speed={5} loop={false} play animationData={ MenuDark } />
                         }
                     </button>
                     <div className={`sidebar-content ${toggle ? 'sidebar-content-active' : 'sidebar-content-disabled'}`}>
@@ -56,6 +56,7 @@ const Navbar = () => {
                             Sağlık
                         </NavLink>
                     </div>
+                    <div className={`point point-sidebar ${toggle ? 'point-white' : 'point-red' }`} />
                 </div>
                 <div className='content'>
                     <Outlet />

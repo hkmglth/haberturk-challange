@@ -4,5 +4,6 @@ export type INewsItemProps = {
     header:string,
     img:string,
     desc:string,
-    detail:string
+    detail:string,
+    isAd?:boolean
 }

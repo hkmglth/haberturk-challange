@@ -2,10 +2,10 @@
     @apply w-full h-full
 }
 .sidebar{
-    @apply fixed flex flex-row h-screen transition-all duration-150 ease-in-out border-r z-0
+    @apply fixed flex flex-row h-screen transition-all duration-150 ease-in-out border-r z-50
 }
 .sidebar-active{
-    @apply w-screen md:w-[625px] bg-light-red
+    @apply w-screen sm:w-[625px] bg-light-red
 }
 .sidebar-disabled{
     @apply w-[64px] bg-white
@@ -20,7 +20,7 @@
     @apply invisible opacity-0 pl-0
 }
 .content{
-    @apply w-full ml-[64px]
+    @apply w-full ml-[64px] overflow-hidden
 }
 .redFlag{
     @apply absolute top-0 left-0 bg-light-red w-[64px] transition-all duration-300 ease-in-out z-10
@@ -30,4 +30,10 @@
 }
 .redFlag-disabled{
     @apply absolute top-0 w-[64px] h-[220px]
+}
+.button-sidebar{
+    @apply relative top-1/2 z-30 h-[64px]
+}
+.point-sidebar{
+    @apply absolute bottom-3 left-[26px] z-30
 }

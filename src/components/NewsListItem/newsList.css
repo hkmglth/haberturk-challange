@@ -1,0 +1,18 @@
+.news-item-wrapper{
+    @apply flex flex-col flex-1 w-[100vw] sm:w-[360px] p-8 bg-white hover:bg-cream transition-all duration-300 ease-in-out border-r
+}
+.news-item-count{
+    @apply text-dark-gray opacity-10 text-6xl font-bold
+}
+.news-item-card{
+    @apply flex flex-1 gap-y-4 flex-col items-center justify-center
+}
+.news-item-time{
+    @apply text-black text-sm self-start
+}
+.news-item-header{
+    @apply text-black font-bold text-2xl
+}
+.news-item-desc{
+    @apply text-[#95989A] font-normal truncate whitespace-normal
+}
