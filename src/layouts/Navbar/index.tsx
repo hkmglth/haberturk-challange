@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './navbar.css'
 
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import Lottie from 'react-lottie-player'
 import MenuLight from 'assets/json/MenuLight.json'
 import MenuDark from 'assets/json/MenuDark.json'
@@ -9,8 +9,9 @@ import Logo from 'components/Logo'
 
 const Navbar = () => {
 
-    const [toggle, setToggle] = useState<boolean>(true)
+    const [toggle, setToggle] = useState<boolean>(false)
     const [isFirstRun, setIsFirstRun] = useState<boolean>(true)
+    const navigate = useNavigate()
 
     useEffect(() => {
         setIsFirstRun(false)
@@ -20,7 +21,7 @@ const Navbar = () => {
         <>
             <div className='flex flex-row'>
                 <div className={`sidebar ${toggle ? 'sidebar-active' : 'sidebar-disabled' }`}>
-                    <Logo theme='light' className='w-[64px] absolute top-0 justify-center items-center px-2 z-20' />
+                    <Logo onClick={() => navigate('/')} theme='light' className='w-[64px] absolute top-0 justify-center items-center px-2 z-20' />
                     <div className={`redFlag ${toggle ? 'redFlag-active' : 'redFlag-disabled'}`} />
                     <button onClick={() => setToggle(!toggle)} className='button-toggle'>
                         {

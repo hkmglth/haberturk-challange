@@ -7,7 +7,7 @@
         @apply w-3 h-3 rounded-full bg-light-red
     }
     .button-toggle{
-        @apply w-[64px] flex justify-center items-center
+        @apply w-[64px] flex justify-center items-center z-20
     }
     .link{
         @apply text-white text-3xl font-bold
