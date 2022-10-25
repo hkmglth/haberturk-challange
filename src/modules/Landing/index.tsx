@@ -7,66 +7,24 @@ import SmallNews from 'components/SmallNews'
 import { useNavigate } from 'react-router-dom'
 import useScrollOnDrag from 'react-scroll-ondrag'
 import './landing.css'
+import { useNews } from 'hooks'
 
 const Landing = () => {
 
     const navigate = useNavigate()
     const newsRef = useRef<React.LegacyRef<HTMLDivElement>>(null)
     const { events } = useScrollOnDrag(newsRef);
-
+    const { news } = useNews()
 
     const handleNavigate = () => {
         navigate('/haberler')
     }
 
-    const news = [
-        {
-            id: 1,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 2,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 3,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 4,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 5,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 6,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 7,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 8,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 9,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-        {
-            id: 10,
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-        },
-    ]
-
     return (
         <div className='landing-wrapper'>
 
             <div className='landing-left'>
-                <Logo onClick={() => navigate('/', { replace: true })} className='h-full max-h-[36px] m-4 flex self-start' theme='light' />
+                <Logo onClick={() => navigate('/', { replace: true })} className='landing-logo' theme='light' />
                 <div className='landing-container'>
 
                     <div className='landing-sidebar'>
@@ -97,7 +55,7 @@ const Landing = () => {
             <div {...events} ref={newsRef} className='landing-right'>
                 <div className='news-overlay' />
                 {
-                    news.map((news) => <SmallNews id={news.id} desc={news.desc} />)
+                    news.map((news) => <SmallNews id={news.id} desc={news.header} />)
                 }
             </div>
         </div>
