@@ -20,8 +20,8 @@ const Navbar = () => {
     return (
         <>
             <div className='flex flex-row'>
-                <div className={`sidebar ${toggle ? 'sidebar-active' : 'sidebar-disabled' }`}>
-                    <Logo onClick={() => navigate('/')} theme='light' className='w-[64px] absolute top-0 justify-center items-center px-2 z-20' />
+                <div onClick={() => setToggle(!toggle) } className={`sidebar ${toggle ? 'sidebar-active' : 'sidebar-disabled' }`}>
+                    <Logo onClick={() => navigate('/')} theme='light' className='sidebar-logo' />
                     <div className={`redFlag ${toggle ? 'redFlag-active' : 'redFlag-disabled'}`} />
                     <button onClick={() => setToggle(!toggle)} className='button-toggle button-sidebar'>
                         {

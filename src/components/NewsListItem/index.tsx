@@ -22,7 +22,7 @@ const NewsListItem = ({ news }: INewsListProps) => {
                         Reklam
                     </p>
                     <div className='news-item-card'>
-                        <img className='news-item-img' src='' alt="" />
+                        <img className='news-item-img' src={require('../../assets/img/advert.png')} alt="" />
                     </div>
                 </div>
                 :
@@ -37,7 +37,7 @@ const NewsListItem = ({ news }: INewsListProps) => {
                     <div className='news-item-card'>
                         <p className='news-item-time'> {news.time} </p>
                         <p className='news-item-header'> {news.header} </p>
-                        <img className='news-item-img' src='' alt="" />
+                        <img className='news-item-img' src={require('../../assets/img/11.png')} alt="" />
                         <p className='news-item-desc'> {news.desc} </p>
                         <Button label='Detay' variant='outlined-white' className='self-start' onClick={() => navigate(`haber?id=${news.id}`)} />
                     </div>

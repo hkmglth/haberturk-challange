@@ -1,5 +1,5 @@
 .news-item-wrapper{
-    @apply flex flex-col flex-1 w-[100vw] sm:w-[360px] p-8 bg-white hover:bg-cream transition-all duration-300 ease-in-out border-r
+    @apply flex flex-col flex-1 w-[100vw] min-w-[300px] sm:w-[360px] p-8 bg-white hover:bg-cream transition-all duration-300 ease-in-out border-r
 }
 .news-item-count{
     @apply text-dark-gray opacity-10 text-6xl font-bold

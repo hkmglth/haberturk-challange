@@ -13,7 +13,7 @@ const News = () => {
     return (
         <>
             <div {...events} ref={newsRef} className='news-list-scroll'>
-                <div className='news-daily'>
+                <div className='content-sidebar news-daily'>
 
                     <div className='news-content'>
                         <p className='news-date'>

@@ -21,4 +21,7 @@
     .link-active{
         @apply text-dark-red
     }
+    .content-sidebar{
+        @apply flex flex-col w-[300px] min-w-[100vw] sm:min-w-[calc(625px-64px)] sm:max-w-[calc(625px-64px)] h-full
+    }
 }

@@ -11,7 +11,7 @@
     @apply w-[64px] bg-white
 }
 .sidebar-content{
-    @apply w-[calc(100%-64px)] z-20 flex flex-col items-start justify-center gap-y-3 transition-all duration-200 ease-in-out
+    @apply w-[300px] min-w-[100vw] sm:w-[calc(100%-64px)] z-20 flex flex-col items-start justify-center gap-y-3 transition-all duration-200 ease-in-out
 }
 .sidebar-content-active{
     @apply visible opacity-100 pl-16
@@ -36,4 +36,7 @@
 }
 .point-sidebar{
     @apply absolute bottom-3 left-[26px] z-30
+}
+.sidebar-logo{
+    @apply w-[64px] absolute top-0 justify-center items-center px-2 z-20 cursor-pointer
 }

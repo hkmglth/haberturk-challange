@@ -2,7 +2,7 @@
     @apply flex flex-row flex-nowrap min-h-[800px] h-screen w-full overflow-x-hidden
 }
 .news-daily{
-    @apply relative lg:fixed flex flex-col min-w-[100vw] max-w-[100vw] sm:min-w-[calc(625px-64px)] sm:max-w-[calc(625px-64px)] h-full bg-white px-[70px] border-r z-20
+    @apply relative lg:fixed bg-white px-[70px] border-r z-20
 }
 .news-content{
     @apply flex flex-1 flex-col justify-center items-start gap-y-5
@@ -19,7 +19,6 @@
 .news-footer{
     @apply text-dark-gray text-sm pb-8 w-[231px]
 }
-
 .news-list{
     @apply flex flex-nowrap border lg:ml-[calc(625px-64px)]
 }
