@@ -1,0 +1,24 @@
+.news-detail-wrapper{
+    @apply flex w-screen flex-col md:flex-row
+}
+.news-detail-list-wrapper{
+    @apply flex md:flex-col flex-row w-full md:h-screen overflow-x-auto md:overflow-y-hidden
+}
+.news-detail{
+    @apply flex flex-1 flex-col h-screen overflow-auto bg-cream
+}
+.news-detail-header{
+    @apply text-4xl font-bold text-black !mt-16
+}
+.news-detail-desc{
+    @apply !pb-2 border-dashed border-b border-dark-gray
+}
+.news-detail-header, .news-detail-desc{
+    @apply mx-40 my-2 max-w-[800px]
+}
+.news-detail-img{
+    @apply mx-20 -mb-5
+}
+.news-detail-detail{
+    @apply bg-cream mx-40 max-w-[950px] p-10
+}

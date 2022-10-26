@@ -1,0 +1,18 @@
+.news-detail-list-item{
+    @apply  flex flex-col justify-center flex-1 p-9 bg-white hover:bg-cream transition-all duration-300 ease-in-out
+}
+.news-list-item-count{
+    @apply absolute text-black opacity-10 font-bold text-6xl -top-11 left-0
+}
+.news-list-item-row{
+    @apply relative flex flex-1 flex-row items-center justify-center
+}
+.news-list-item-img{
+    @apply w-52 h-32 object-cover z-10
+}
+.news-list-item-header{
+    @apply flex flex-1 h-32 flex-col text-xl font-bold justify-between px-5
+}
+.news-list-item-time{
+    @apply text-black text-sm font-normal
+}

@@ -1,10 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { NewsProvider } from 'contexts/NewsContext'
 
 import Landing from 'modules/Landing'
 import Navbar from 'layouts/Navbar'
 import News from 'modules/News'
-import { NewsProvider } from 'contexts/NewsContext'
+import NewsDetail from 'modules/NewsDetail'
+
 
 const App = () => {
     return (
@@ -21,6 +23,7 @@ const App = () => {
                         <Route path='dunya' element={<News />} />
                         <Route path='teknoloji' element={<News />} />
                         <Route path='saglik' element={<News />} />
+                        <Route path='haberDetay' element={<NewsDetail />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

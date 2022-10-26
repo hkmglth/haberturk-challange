@@ -39,7 +39,7 @@ const NewsListItem = ({ news }: INewsListProps) => {
                         <p className='news-item-header'> {news.header} </p>
                         <img className='news-item-img' src={require('../../assets/img/11.png')} alt="" />
                         <p className='news-item-desc'> {news.desc} </p>
-                        <Button label='Detay' variant='outlined-white' className='self-start' onClick={() => navigate(`haber?id=${news.id}`)} />
+                        <Button label='Detay' variant='outlined-white' className='self-start' onClick={() => navigate(`/haberler/haberDetay`, { state:{...news}, relative:'route' })} />
                     </div>
                 </div>
             }
